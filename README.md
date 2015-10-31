@@ -31,7 +31,7 @@ In your docker-compose it will create two folder for you.
 **How to import current WordPress?**
 
 1. Copy wordpress folder to `www-data` and execute `fix-permissions`.
-2. Dump database data and `docker exec` import your dump.sql
+2. Dump database from current wordpress and import into contianer.
 
 **How to increase upload file size (modify php.ini)?**
 
