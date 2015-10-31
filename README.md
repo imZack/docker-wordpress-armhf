@@ -25,7 +25,7 @@ In your docker-compose it will create two folder for you.
 **How to fix file permissions?**
 
 ```sh
-docker-compose run wordpress fix-permissions
+λ ~/wordpress/ docker-compose run wordpress fix-permissions
 ```
 
 **How to import current WordPress?**
