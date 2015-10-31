@@ -22,7 +22,7 @@ In your docker-compose it will create two folder for you.
 
 ## FAQ
 
-** How to fix file permissions? **
+**How to fix file permissions?**
 
 ```sh
 docker-compose run wordpress fix-permissions
@@ -62,19 +62,22 @@ These images has been built for `armhf`.
 Don't know How to run Docker on Raspberry Pi 2? [Check out Hypriot](http://blog.hypriot.com/downloads/)
 
 ### WordPress
-[zack/wordpress-armhf:4.3.1-apache](https://hub.docker.com/r/zack/wordpress-armhf/)
+Docker Hub:  [zack/wordpress-armhf:4.3.1-apache](https://hub.docker.com/r/zack/wordpress-armhf/)
 
-Dockerfile fork from official repo: [wordpress:4.3.1-apache](https://github.com/docker-library/wordpress/blob/4823a04099579f2aafb118ae8177449425cc84d2/apache/Dockerfile)
+[Dockerfile](https://github.com/imZack/wordpress-armhf/tree/master/wordpress)
+> fork from official repo: [wordpress:4.3.1-apache](https://github.com/docker-library/wordpress/blob/4823a04099579f2aafb118ae8177449425cc84d2/apache/Dockerfile)
 
 ### MariaDB
-[armbuilds/mariadb](https://hub.docker.com/r/armbuilds/mariadb/)
+Docker Hub: [armbuilds/mariadb](https://hub.docker.com/r/armbuilds/mariadb/)
 
 Just use pre-build image from armbuilds
 
 ### PHP
-[zack/php-arm:5.6-apache](https://hub.docker.com/r/zack/php-armhf/)
+Docker Hub: [zack/php-arm:5.6-apache](https://hub.docker.com/r/zack/php-armhf/)
 
-Dockerfile fork from official repo: [php:5.6.14-apache](https://github.com/docker-library/php/blob/fec7f537f049aafd2102202519c3ca9cb9576707/5.6/apache/Dockerfile)
+[Dockerfile](https://github.com/imZack/wordpress-armhf/tree/master/php)
+
+> fork from official repo: [php:5.6.14-apache](https://github.com/docker-library/php/blob/fec7f537f049aafd2102202519c3ca9cb9576707/5.6/apache/Dockerfile)
 
 ## Contributors
 
