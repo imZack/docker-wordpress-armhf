@@ -35,7 +35,7 @@ docker-compose run wordpress fix-permissions
 
 **How to increase upload file size (modify php.ini)?**
 
-1. Create `uploads.ini` file with these settings.
+Step 1. Create `uploads.ini` file with these settings.
 ```ini
 file_uploads = On
 memory_limit = 128M
@@ -44,7 +44,7 @@ post_max_size = 64M
 max_execution_time = 1800
 ```
 
-2. Edit `docker-compose.yml`, wordpress > volumes append `./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini`
+Step 2. Edit `docker-compose.yml`, wordpress > volumes append `./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini`
 
 ```
 volumes:
