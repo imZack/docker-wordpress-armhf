@@ -7,7 +7,7 @@ Dockerized WordPress image running on armhf platform (ex: Raspberry Pi)
 
 ```sh
 λ ~/ mkdir wordpress && cd $_
-λ ~/wordpress/ wget https://xxx/docker-compose.yml
+λ ~/wordpress/ wget https://raw.githubusercontent.com/imZack/wordpress-armhf/master/docker-compose/docker-compose.yml
 λ ~/wordpress/ docker-compose up
 ```
 
@@ -20,26 +20,6 @@ In your docker-compose it will create two folder for you.
 - `www-data` all WordPress data goes here.
 - `mysql-data` all MariaDB data.
 
-## Images
-These has been built for `armhf`.
-
-Don't know How to run Docker on Raspberry Pi 2? [Check out Hypriot](http://blog.hypriot.com/downloads/)
-
-### WordPress
-[zack/wordpress-armhf:4.3.1-apache](https://hub.docker.com/r/zack/wordpress-armhf/)
-
-Dockerfile fork from official repo: [wordpress:4.3.1-apache](https://github.com/docker-library/wordpress/blob/4823a04099579f2aafb118ae8177449425cc84d2/apache/Dockerfile)
-
-### MariaDB
-[armbuilds/mariadb](https://hub.docker.com/r/armbuilds/mariadb/)
-
-Just use pre-build image from armbuilds
-
-### PHP
-[zack/php-arm:5.6-apache](https://hub.docker.com/r/zack/php-armhf/)
-
-Dockerfile fork from official repo:
-
 ## FAQ
 
 ** How to fix file permissions? **
@@ -48,12 +28,12 @@ Dockerfile fork from official repo:
 docker-compose run wordpress fix-permissions
 ```
 
-** How to import current WordPress? **
+**How to import current WordPress?**
 
 1. Copy wordpress folder to `www-data` and execute `fix-permissions`.
 2. Dump database data and `docker exec` import your dump.sql
 
-** How to increase upload file size (modify php.ini)?  **
+**How to increase upload file size (modify php.ini)?**
 
 1. Create `uploads.ini` file with these settings.
 ```ini
@@ -72,7 +52,29 @@ volumes:
  - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 ```
 
-** More questions? ** [create an issue](https://github.com/imZack/wordpress-armhf/issues/new)
+**More questions?**
+
+[create an issue](https://github.com/imZack/wordpress-armhf/issues/new)
+
+## Images
+These images has been built for `armhf`.
+
+Don't know How to run Docker on Raspberry Pi 2? [Check out Hypriot](http://blog.hypriot.com/downloads/)
+
+### WordPress
+[zack/wordpress-armhf:4.3.1-apache](https://hub.docker.com/r/zack/wordpress-armhf/)
+
+Dockerfile fork from official repo: [wordpress:4.3.1-apache](https://github.com/docker-library/wordpress/blob/4823a04099579f2aafb118ae8177449425cc84d2/apache/Dockerfile)
+
+### MariaDB
+[armbuilds/mariadb](https://hub.docker.com/r/armbuilds/mariadb/)
+
+Just use pre-build image from armbuilds
+
+### PHP
+[zack/php-arm:5.6-apache](https://hub.docker.com/r/zack/php-armhf/)
+
+Dockerfile fork from official repo: [php:5.6.14-apache](https://github.com/docker-library/php/blob/fec7f537f049aafd2102202519c3ca9cb9576707/5.6/apache/Dockerfile)
 
 ## Contributors
 
