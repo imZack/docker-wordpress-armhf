@@ -1,0 +1,21 @@
+wordpress:
+    image: zack/wordpress-armhf:4.3.1-apache
+    restart: always
+    links:
+     - mysql
+    environment:
+     - WORDPRESS_DB_PASSWORD=wordpressmeetsdocker
+    ports:
+     - "8080:80"
+    volumes:
+     - ./www-data:/var/www/html
+
+mysql:
+    image: armbuilds/mariadb
+    restart: always
+
+    volumes:
+     - ./mysql-data:/var/lib/mysql
+    environment:
+     - MYSQL_ROOT_PASSWORD=wordpressmeetsdocker
+     - MYSQL_DATABASE=wordpress
